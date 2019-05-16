@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.tokenapp.project.UserManagement.LogInActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -15,10 +17,10 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i= new Intent(SplashActivity.this,LogInActivity.class);
+                Intent i= new Intent(SplashActivity.this, LogInActivity.class);
                 startActivity(i);
                 finish();
             }
-        },5000);
+        },3000);
     }
 }

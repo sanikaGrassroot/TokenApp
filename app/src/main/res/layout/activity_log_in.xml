@@ -4,10 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".LogInActivity">
+    tools:context=".project.UserManagement.LogInActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/action_bar">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar" />
+    </android.support.design.widget.AppBarLayout>
 
     <EditText
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="200dp"
         android:id="@+id/email_phone_EditText_LogIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

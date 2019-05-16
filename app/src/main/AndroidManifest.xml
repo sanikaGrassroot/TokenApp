@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tokenapp">
 
     <application
@@ -8,8 +9,43 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".RegisterActivity"></activity>
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".project.Dashboard.GalleryActivity"></activity>
+        <activity android:name=".project.OrderManagement.GenerateOrder"
+            android:parentActivityName=".project.OrderManagement.ViewOrder"
+            >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".project.OrderManagement.ViewOrder"/>
+        </activity>
+        <activity
+            android:name=".project.Communication.ViewCommunication"
+            android:parentActivityName=".project.Dashboard.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".project.Dashboard.MainActivity" />
+        </activity>
+        <activity android:name=".project.OrderManagement.ViewOrder"
+            android:parentActivityName=".project.Dashboard.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".project.Dashboard.MainActivity" />
+        </activity>
+        <activity
+            android:name=".project.UserManagement.ProfileActivity"
+            android:parentActivityName=".project.Dashboard.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".project.Dashboard.MainActivity" />
+        </activity>
+        <activity
+            android:name=".project.UserManagement.RegisterActivity"
+            android:parentActivityName=".project.UserManagement.LogInActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".project.UserManagement.LogInActivity" />
+        </activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,11 +53,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogInActivity" />
+        <activity android:name=".project.UserManagement.LogInActivity" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".project.Dashboard.MainActivity"
+            />
     </application>
 
 </manifest>
